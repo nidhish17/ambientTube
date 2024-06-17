@@ -7,7 +7,7 @@
 
 
 <h2>Features</h2>
-<hr />
+
 <ul class="list-disc space-y-2">
     <li>Download 4k videos in vp90 and av1 codecs. and be able to convert them to H.264</li>
     <li>Supports multiples codecs av01 & vp90(for 2k, 4k) and H.264 for res below 2k</li>
@@ -23,7 +23,7 @@
 <img src="appImgs/img_1.png" alt="demo-img">
 
 ## Acknowledgements
-<hr>
+
 <ul class="list-disc space-y-2">
     <li>Python</li>
     <li><a href="https://github.com/python-eel/Eel">eel python library</a> (Electron equivalent library in py)</li>
@@ -40,7 +40,7 @@
     <li><a href="https://www.youtube.com/watch?v=p3tSLatmGvU">Tutorial for converting .py to .exe</a></li>
 </ul>
 
-<hr>
+
 <img src="appImgs/img_3.png" alt="">
 <hr>
 <img src="appImgs/img_4.png" alt="">
@@ -53,7 +53,7 @@
 <hr>
 <img src="appImgs/img_7.png" alt="">
 
-<hr>
+
 
 # Note <hr>
 
