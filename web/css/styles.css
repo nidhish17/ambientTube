@@ -1,0 +1,46 @@
+
+
+@keyframes slide-in {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slide-out {
+    from { transform: translateX(0); }
+    to { transform: translateX(120%); }
+}
+
+
+.copied-toast {
+
+}
+
+.copied-toast.show {
+    display: block;
+    animation: slide-in 0.5s forwards;
+}
+
+.copied-toast.hide {
+    animation: slide-out 0.5s forwards;
+}
+
+.interactions-disabled {
+    pointer-events: none; /* Disable all pointer events */
+    opacity: 0.7; /* Make the element appear disabled */
+    /* Optionally, add more styles for better visual indication */
+}
+
+/*scroll bar*/
+::-webkit-scrollbar {
+    height: 2px;
+    width: 2px;
+    /*background: #000;*/
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#6c04a8, #ef2476);
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% block head %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="../images/appleTube.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="../css/output.css">
+
+
+    <script type="text/javascript" src="/eel.js"></script>
+
+    <title>ambientTube</title>
+    {% endblock %}
+</head>
+
+<body class="bg-neutral-900 overflow-x-hidden relative" id="page-body">
+
+<div class="body-processing-text bg-black/[0.3] absolute top-0 bottom-0 z-20 w-full h-full hidden">
+    <div class="flex justify-center items-center h-full w-full">
+        <h1 class="font-bold text-rose-700 text-4xl text-center mt-20 animate-pulse">Processing...</h1>
+    </div>
+</div>
+
+<!-- Your page content -->
+{% block content %}
+
+
+{% endblock %}
+
+<!--ping message-->
+<section id="alert">
+    <div id="error-msg"
+         class="fixed max-w-4xl mx-auto bg-red-400 top-5 rounded-xl px-4 py-2 left-4 text-amber-50 hidden error-alert z-30">
+        <p class="message text-xl p-2">please select radio button <span>!</span></p>
+    </div>
+</section>
+
+{% block scripts %}
+<script src="../js/base.js"></script>
+{% endblock %}
+
+</body>
+</html>

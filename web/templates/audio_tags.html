@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "header.html" %}
+{% include "settings.html" %}
+<!--download url input and radio btns-->
+<section id="url">
+    <div class="max-w-4xl py-12 px-6 mx-auto mt-10">
+
+        <!-- radio btns(mp3 and tags) -->
+        <div class="flex flex-row justify-start items-center space-x-3 mb-4 text-white">
+            <!-- mp3 radio btn -->
+            <div>
+                <input type="radio" id="mp3" name="option" value="2" class="peer sr-only">
+                <label for="mp3" class="py-2 px-4 border border-red-100 hover:bg-red-500 hover:cursor-pointer peer-checked:bg-red-500">MP3</label>
+            </div>
+            <!-- tags extract radio btn -->
+            <div>
+                <input type="radio" id="tags" name="option" value="3" class="peer sr-only">
+                <label for="tags" class="py-2 px-4 border border-red-100 hover:bg-red-500 hover:cursor-pointer peer-checked:bg-red-500">Extract
+                    Tags</label>
+            </div>
+        </div>
+
+        <!--        link input and submit button-->
+        <div class="flex flex-row justify-center items-center">
+            <input type="url" id="yt-url-input"
+                   class="px-3 h-14 w-full text-lg py-4 rounded-l-md shadow-lg focus:outline-none"
+                   placeholder="Youtube URL Here" required>
+            <button type="submit" id="submit-btn"
+                    class="block h-14 rounded-r-md py-4 px-10 bg-blue-600 shadow-lg text-white hover:bg-blue-700 transition-all duration-300">
+                Go
+            </button>
+        </div>
+    </div>
+
+    <!--    copied toast message -->
+    <div class="copied-toast hidden hide fixed bg-violet-800 rounded-3xl top-5 right-5 border border-2 shadow-lg shadow-violet-800/50 border-violet-800 max-w-2xl px-4 py-2">
+        <p class="text-2xl text-white uppercase">copied</p>
+    </div>
+</section>
+
+<!--audio download card-->
+<section id="audio-download-card">
+    <div class="max-w-4xl mb-12 px-6 mx-auto hidden audio-details-card">
+        <div class="px-8 card bg-neutral-800 text-amber-50 shadow-lg rounded py-8">
+            <div class="flex flex-row">
+                <!--                thumbnail and title and length-->
+                <div class="flex flex-col">
+                    <!--                    div for image and download btn-->
+                    <div class="group relative">
+                        <!--                        thumbnail-->
+                        <img id="yt-audio-display-thumb" src="../images/placeholder-img.png" alt="youtube thumbnail img"
+                             class="shadow-md border border-2 border-black">
+
+                        <!--                        gradient element-->
+                        <div class="absolute top-0 right-0 left-0 bottom-0 bg-gradient-to-b group-hover:from-transparent group-hover:to-gray-900
+                        group:duration-700 group:transition-all"></div>
+
+                        <!--                        download button-->
+                        <img src="#" alt="#" class="hidden">
+                        <a href="#" target="_blank" id="yt-audio-save-thumb" class="uppercase w-full text-center hidden group-hover:block bg-opacity-70 text-3xl
+                        text-white bg-rose-500 absolute bottom-0 duration-200 transition-all savebtn">save <i
+                                class="bi bi-download"></i></a>
+                    </div>
+
+                    <div class="mt-4 w-80">
+                        <!-- title-->
+                        <h5 class="text-lg break-words" id="yt-audio-title"></h5>
+                        <!-- duration-->
+                        <h5 class="text-lg break-words">Duration: <span
+                                id="yt-audio-duration">00:00:00</span></h5>
+                        <!--                        show tags?-->
+                        <input type="checkbox" id="show-tags">
+                        <label for="show-tags" class="text-lg">Show Tags</label>
+                    </div>
+
+                </div>
+                <!--                download section this technically was for the video but for audio we don't need them unless we want to download different bitrates -->
+
+            </div>
+            <div class="progress-bar mt-4 flex flex-row items-center space-x-2 justify-center relative break-none">
+                <div class="audio-progress-bar bg-gradient-to-r h-1 from-purple-600 to-pink-600 rounded flex-1 absolute left-0" style="width: 0"><span class="audio-download-percentage"></span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--tags card-->
+<section id="tags-panel">
+    <div class="max-w-4xl mb-12 px-6 mx-auto tags-card hidden">
+        <!--        card where the tags will be displayed-->
+        <div class="px-8 card bg-neutral-800 text-yellow-50 shadow-lg rounded py-8">
+            <!--            no tags for this video element-->
+            <div id="video-has-no-tags" class="text-center hidden">
+                <p class="text-3xl text-bold text-orange-800 capitalize">This Video Has No tags, <span
+                        class="text-base text-purple-600">try another link</span></p>
+                <iframe src="https://giphy.com/embed/xTiN0L7EW5trfOvEk0" width="280" height="380" frameBorder="0"
+                        class="pointer-events-none giphy-embed text-center mx-auto pt-4" allowFullScreen></iframe>
+                <p><a href="https://giphy.com/gifs/internet-apple-technology-xTiN0L7EW5trfOvEk0"></a></p>
+            </div>
+
+            <!--            the tag element-->
+            <div class="grid grid-cols-3 text-center grid-flow-row gap-3 tags-grid text-yellow-50 items-center">
+                <!--                js will create the tag element and append it here-->
+            </div>
+
+            <!--            copy to clipboard button-->
+            <div class="flex justify-end space-x-5">
+                <button class="selectall-tags-btn rounded-lg py-2 px-4 mt-8 shadow shadow-lg shadow-violet-500/50 bg-violet-600 hover:bg-violet-500 text-xl duration-200 transition-all text-white">
+                    Select All
+                </button>
+                <button class="copy-tags-btn rounded-lg py-2 px-4 mt-8 shadow shadow-lg shadow-violet-500/50 bg-violet-600 hover:bg-violet-500 text-xl duration-200 transition-all text-white">
+                    Copy Selected
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<script src="../js/script.js" type="text/javascript"></script>
+
+{% endblock %}
+
+
+
+

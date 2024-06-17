@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "header.html" %}
+{% include "settings.html" %}
+
+<section id="about-nav">
+    <div class="max-w-6xl container mx-auto mt-8">
+        <div class="flex flex-row justify-between mx-16 text-amber-50 items-center">
+            <a href="main.html" class="font-semibold text-3xl bg-gradient-to-r from-[#89f7fe] to-[#66a6ff] text-transparent bg-clip-text hover:scale-125 transition-all duration-1000 ease-in-out group">ambientTube</a>
+            <img src="../images/appleTube.ico" class="w-20 h-auto rounded-lg hover:scale-125 transition-all duration-1000 ease-in-out" alt="icon">
+        </div>
+    </div>
+</section>
+
+
+<section id="about" class="text-yellow-50">
+    <div class="max-w-4xl container mx-auto py-8 text-amber-50">
+        <div class="app-info">
+            <h1 class="text-3xl font-semibold mb-2 bg-gradient-to-r from-[#EA8D8D] to-[#A890FE] inline-block text-transparent bg-clip-text">Features</h1>
+            <hr>
+            <div class="features-info text-xl mx-8 mt-2">
+                <ul class="list-disc space-y-2">
+                    <li>Download 4k videos in vp90 and av1 codecs. and be able to convert them to H.264</li>
+                    <li>Supports multiples codecs av01 & vp90(for 2k, 4k) and H.264 for res below 2k</li>
+                    <li>Supports all resolutions</li>
+                    <li>Supports conversion of codecs for videos 2k and above to H.264</li>
+                    <li>Uses <span class="text-lime-300">NVIDIA</span> Cuda Cores for conversion of 2k, 4k, 8k videos to H.264</li>
+                    <li>Download Thumbnails</li>
+                    <li>Download Audio MP3 320kbps</li>
+                    <li>Extract Tags from youtube video</li>
+                    <li>Unlimited Downloads</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="app-info mt-8">
+            <h1 class="text-3xl font-semibold mb-2 bg-gradient-to-r from-[#02AABD] to-[#00CDAC] inline-block text-transparent bg-clip-text">Beautiful Modern UI</h1>
+            <hr>
+            <div class="UI-info text-xl mx-8 mt-2 font-medium">
+                <ul class="list-disc space-y-2">
+                <li><span class="bg-gradient-to-r from-[#FF5F6D] to-[#FFC371] inline-block text-transparent bg-clip-text">Modern UI</span></li>
+                <li><span class="bg-gradient-to-r from-[#11998E] to-[#38EF7D] inline-block text-transparent bg-clip-text">Easy to use</span></li>
+                <li><span class="bg-gradient-to-r from-[#EE9CA7] to-[#FFDDE1] inline-block text-transparent bg-clip-text">Dark mode so your eyes doesn't burn </span>🔥</li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="app-info mt-8">
+            <h1 class="text-3xl font-semibold mb-2 bg-gradient-to-r from-[#EA8D8D] to-[#A890FE] inline-block text-transparent bg-clip-text">Libraries & Tools</h1>
+            <hr>
+            <div class="tech-stack text-xl mx-8 mt-2 font-medium">
+                <ul class="list-disc space-y-2">
+                <li>Python <img class="w-5 h-auto inline-flex" src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="python logo"></li><li>eel python library</li>
+                <li>Javascript <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-auto inline-flex" x="0px" y="0px" viewBox="0 0 48 48"><path fill="#ffd600" d="M6,42V6h36v36H6z"></path><path fill="#000001" d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z"></path></svg>
+                </li>
+                <li>Tailwind CSS <svg class="w-7 h-auto inline-flex fill-sky-400" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"></path></g></svg></li>
+                <li><span class="bg-gradient-to-r from-[#009245] to-[#FCEE21] inline-block text-transparent bg-clip-text">FFMPEG</span></li>
+                <li><span class="bg-gradient-to-r from-[#FF512F] to-[#DD2476] inline-block text-transparent bg-clip-text">yt-dlp</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="notes mt-8">
+            <h1 class="text-3xl font-semibold text-red-600 mb-2">NOTE</h1>
+            <hr>
+            <div class="terms-notice mx-8 mt-2 text-xl">
+                <ul class="list-disc space-y-2">
+                    <li>Downloading videos from youtube may <span class="text-yellow-200">violate</span> the youtube terms of service</li>
+                    <li>You can download one video at a time</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="updates mt-8">
+            <h1 class="text-3xl font-semibold bg-gradient-to-r from-[#EA8D8D] to-[#A890FE] inline-block text-transparent bg-clip-text mb-2">Future Updates</h1>
+            <hr>
+            <div class="future-updates mx-8 mt-2 text-xl">
+                <ul class="list-disc space-y-2">
+                    <li>Download Multiple Videos at the same time</li>
+                    <li>Download from different sites</li>
+                    <li>Customizable H.264 options</li>
+                </ul>
+            </div>
+            <div class="flex flex-row space-x-4 justify-evenly">
+                <a href="mailto:nidhish1233@gmail.com" class="text-blue-300 decoration-1 underline text-xl my-8 inline-block">Report a BUG</a>
+                <a href="https://github.com/nidhish17/ambientTube" target="_blank" class="text-blue-300 decoration-1 underline text-xl my-8 inline-block">contact me / Report a BUG on github</a>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+{% endblock %}
+

@@ -1,0 +1,84 @@
+<!-- video quality selection modal -->
+<!--this is the floating model that contains all the vocodec selection and quality selection inputs-->
+<div id="video-qualities-modal"
+     class="absolute bg-neutral-900 text-yellow-50 left-1/2 top-5 -translate-x-1/2 rounded-xl max-w-xl shadow-xl shadow-neutral-950 hidden z-20">
+    <!-- main container -->
+    <div class="mx-auto max-w-4xl container mb-8 mt-4 px-4 break-words">
+        <!-- yt link and close btn -->
+        <div class="flex flex-row justify-between items-center bg-neutral-900 px-2 py-2">
+            <div class="yt-link-header text-sm font-extra-thin">YT Link Here</div>
+            <!-- modal close btn -->
+            <button class="modal-close-btn"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <hr>
+        <!-- split into header above and the yt details and quality selection below -->
+        <div class="fetching-details hidden absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-blue-500">
+            <div class="animate-spin text-6xl"><i class="bi bi-arrow-repeat"></i></div>
+        </div>
+        <div class="py-3 px-3 yt-details-container">
+            <!-- title and duration string -->
+            <div class="flex flex-row justify-between items-center space-x-6 mb-2">
+                <p class="title-quality-header font-thin text-sm max-w-sm">Title</p>
+                <p class="duration-quality-header text-lg">00:00:00</p>
+            </div>
+            <div class="flex items-center justify-center py-2"><img src="../images/placeholder-img.png"
+                                                                    class="border border-2 border-indigo-800 rounded modal-display-thumb-img"
+                                                                    alt="yt thumb img"></div>
+            <!-- video qualities -->
+            <div class="text-yellow-50 text-lg font-lightweight flex items-center flex-col justify-center">
+                <!-- download video label -->
+                <div class="">
+                    <i class="bi bi-camera-video"></i>
+                    <span>Download Video</span>
+                </div>
+
+                <!-- video qualities select -->
+                <form id="download-video-select-quality" class="flex flex-col mt-2">
+                    <div class="flex flex-row">
+                        <select name="" id="download-option" class="bg-neutral-800 text-yellow-50 rounded-l-lg p-2.5 block focus:ring-blue-500 focus:border-purple-500 hover:cursor-pointer">
+                            <!-- js will add options here -->
+                            <option>Available Video Qualities(choose)</option>
+                        </select>
+                        <input type="submit"
+                               class="bg-rose-500 text-white rounded-r-lg p-2.5 hover:cursor-pointer hover:bg-rose-700"
+                               value="Download">
+                    </div>
+                </form> <!-- form end -->
+            </div> <!-- video qualities end -->
+
+
+            <!-- codec info -->
+            <div class="mt-6">
+                <p class="text-lg font-lightweight">Video Codec</p>
+                <hr>
+                <div class="mt-2 space-y-4">
+                    <!-- convert to h264 -->
+                    <div class="flex flex-row justify-between">
+                        <p class="">Convert to H.264</p>
+                        <!-- toggle btn -->
+                        <label class="inline-flex items-center cursor-pointer">
+                            <input type="checkbox" value="" class="sr-only peer convert-to-h264">
+                            <!-- check toggle btn -->
+                            <div class="opacity-50 cursor-not-allowed convert-to-h264-switch relative w-11 h-6 bg-gray-200 rounded-full peer dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                        </label>
+                    </div>
+                </div> <!-- end of element housing codec inputs -->
+
+                <!-- Notes -->
+                <div class="text-red-600 text-sm font-medium mt-6 space-y-1 break-words">
+                    <p>* H.264 codec is available for videos with resolutions up to 1080p</p>
+                    <p>* H.264 conversion is available for videos with resolutions 2k and above</p>
+                    <p>* Filesizes may vary if 2k or 4k are converted to H.264</p>
+                    <p>* AV1 is a modern codec suitable for video editing</p>
+                    <p>* Conversion of codec may take longer</p>
+                </div>
+
+            </div> <!-- end of codec info -->
+        </div> <!-- end of yt details div -->
+
+    </div> <!-- end of main container -->
+
+</div>
+
+<script src="../js/quality_selection_modal.js"></script>
+

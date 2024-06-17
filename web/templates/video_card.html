@@ -1,0 +1,102 @@
+<template id="video-card-template">
+
+<div class="container max-w-6xl mx-auto mb-4 shadow shadow-xl">
+    <!-- video download card -->
+    <div class="video-download-card text-yellow-50 bg-neutral-800 flex flex-row relative">
+
+
+        <!-- thumbnail image outside container -->
+        <!-- all of the thumbnail part -->
+        <div class="p-4 max-w-80 min-w-80">
+            <!--                image container-->
+            <div class="thumb-img-container border border-2 border-pink-700 relative">
+                <!--                    display thumbnail image-->
+                <img src="../images/thumb2.jpg" alt="img" class="video-card-display-thumbnail"/>
+
+                <!-- hover opacity download save thumb btn container -->
+                <div class="absolute bg-black/75 w-full h-full top-0 flex items-center justify-center opacity-0 group hover:opacity-100 transition-all duration-200">
+                    <!-- download btn -->
+                    <a href="#" class="video-card-download-thumbnail" target="_blank"><i
+                            class="bi bi-download text-3xl border border-2 border-red-300 text-red-300 rounded-full px-2 py-1"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- youtube details title thumbnail and user-tags(convert to H264) -->
+        <div class="p-4 break-all flex flex-col justify-between flex-grow min-w-80">
+            <div class="youtube-video-details space-y-1">
+                <h3 class="video-title text-xl">Video Title</h3>
+            </div>
+            <div class="user-input-details flex flex-row justify-between">
+                <div class="flex flex-row space-x-4">
+                    <p class="text-emerald-500"><i class="bi bi-code-slash"></i> <span class="vcodec-text">vcodec</span></p>
+                    <p class="text-emerald-500"><i class="bi bi-camera-video mr-2"></i>MP4</p>
+                    <p class="text-emerald-500"><i class="bi bi-clock mr-2"></i><span
+                            class="video-duration">03:14</span></p>
+                    <p class="text-emerald-500"><i class="bi bi-aspect-ratio mr-2"></i><span class="resolution-text"></span></p>
+                </div>
+
+                <div class="download-status hidden">
+                    <p class="text-lime-400"><i class="bi bi-file-check mr-2"></i>Downloaded</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- open file location -->
+        <div class="flex flex-col justify-between px-2 py-2 border-l-2 border-indigo-800">
+            <div class="relative">
+                <button class="open-file-location-button text-2xl group px-2 py-1 border border-2 border-indigo-900 rounded-full hover:bg-indigo-900 cursor-pointer text-yellow-50 relative">
+                    <i class="bi bi-folder2-open"></i>
+                    <span class="group-hover:block text-sm text-yellow-50 p-1 mt-2 hidden w-32 absolute text-center bg-gray-700 rounded-md right-12 transform
+                        translate-y-1/2 bottom-1/2">open file location
+                    </span>
+                </button>
+            </div>
+
+            <div class="relative">
+                <button class="card-delete-button group text-2xl px-2 py-1 border border-2 border-indigo-900 rounded-full hover:bg-indigo-900 cursor-pointer text-yellow-50">
+                    <i class="bi bi-trash"></i>
+                    <span class="group-hover:block text-sm text-yellow-50 p-1 mt-2 hidden w-32 absolute text-center bg-gray-700 rounded-md right-12 transform
+                        translate-y-1/2 bottom-1/2">delete video card
+                    </span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- error logger -->
+        <div class="z-20 error-logger absolute flex flex-col bg-red-950/60 text-yellow-100 top-0 w-full h-full overflow-y-scroll hidden">
+            <div class="mt-8 mx-8 break-all my-6 relative">
+                <div class="flex flex-row">
+                    <h1 class="text-3xl">An Error Occurred</h1>
+<!--                    <button class="text-3xl text-yellow-50 opacity-90 absolute right-0 -top-6 "><i-->
+<!--                            class="bi bi-x-octagon-fill"></i></button>-->
+                </div>
+                <p class="break-all text-yellow-50 error-text">Lorem Lorem ipsum dolor sit amet, consectetur
+                    adipisicing
+                    elit. Aut facilis hic laboriosam magni maiores Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Ipsam quo repellendus tempore veniam. Ad, dignissimos doloremque
+                    exercitationem harum ipsa ipsam labore laboriosam neque non pariatur praesentium, tempore
+                    veniam, veritatis voluptatibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Adipisci aperiam cumque cupiditate dolore dolorem est, eveniet ex, expedita illo impedit
+                    inventore iure iusto non nulla officia quidem ratione recusandae tempora. qui sequi unde
+                    voluptas. Ad beatae blanditiis dignissimos facere facilis nulla, perferendis quaerat
+                    ratione? Quidem, voluptatum. ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+                    dicta distinctio fuga iure maxime, nemo non, provident temporibus ullam veniam voluptate
+                    voluptatem. Cupiditate et impedit ipsam mollitia repellendus repudiandae vitae.</p>
+            </div>
+        </div> <!-- end of error logger -->
+
+        <!-- progress bar container & progress bar-->
+        <div class="progress-bar-container absolute right-0 w-full h-full flex justify-center items-center hidden">
+            <p class="text-yellow-100 z-10 progress-text text-xl font-semibold">Downloading...</p>
+            <div class="absolute progress-bar right-0 h-full bg-black/85 border-l-2 border-violet-950"
+                 style="width: 100%;"></div>
+        </div>
+
+
+    </div> <!-- video download card container -->
+</div> <!-- main container -->
+</template>

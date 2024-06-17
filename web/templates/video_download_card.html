@@ -1,0 +1,27 @@
+<!-- enter the url link -->
+<section>
+    <div class="max-w-5xl container mx-auto mt-6">
+        <form action="#" class="video-yt-url-input">
+            <div class="flex flex-row text-yellow-50">
+                <label for="video-youtube-link-input" hidden></label>
+                <input type="url"
+                       class="w-full rounded-l-lg bg-neutral-800 py-3 px-6 text-xl font-thin focus:outline-none focus:ring-0"
+                       placeholder="Youtube link here" id="video-youtube-link-input"/>
+                <button type="submit" id="yt-url-search-submit"
+                        class="bg-gray-800 text-yellow-50 px-6 rounded-r-lg group hover:bg-gray-900 transition-all duration-200">
+                    <i class="bi bi-search-heart text-4xl group-hover:text-pink-800 transition-all duration-200"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- main video downloaded card container -->
+<section>
+    <div id="video-cards-container" class="container max-w-6xl mx-auto mt-6 overflow-y-scroll border-2 border-white rounded-lg mb-8 h-112">
+        <!-- video elements -->
+        {% include "video_card.html" %}
+    </div>
+</section>
+
+{% include "quality_selection_modal.html" %}
