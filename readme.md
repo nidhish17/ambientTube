@@ -7,7 +7,7 @@
 
 
 <h2>Features</h2>
-<hr />
+
 <ul class="list-disc space-y-2">
     <li>Download 4k videos in vp90 and av1 codecs. and be able to convert them to H.264</li>
     <li>Supports multiples codecs av01 & vp90(for 2k, 4k) and H.264 for res below 2k</li>
@@ -23,7 +23,7 @@
 <img src="appImgs/img_1.png" alt="demo-img">
 
 ## Acknowledgements
-<hr>
+
 <ul class="list-disc space-y-2">
     <li>Python</li>
     <li><a href="https://github.com/python-eel/Eel">eel python library</a> (Electron equivalent library in py)</li>
@@ -40,7 +40,7 @@
     <li><a href="https://www.youtube.com/watch?v=p3tSLatmGvU">Tutorial for converting .py to .exe</a></li>
 </ul>
 
-<hr>
+
 <img src="appImgs/img_3.png" alt="">
 <hr>
 <img src="appImgs/img_4.png" alt="">
@@ -53,12 +53,13 @@
 <hr>
 <img src="appImgs/img_7.png" alt="">
 
-<hr>
+
 
 # Note <hr>
 
 [//]: # (<p>My code may break as it is not tested rigorously</p>)
 <p>i'll work on this project and implement more features in the future</p>
+<p>When you download audio you may get the filename as yt-Title[appleTube]......, appleTube was the name I came up with at first and I forgot to change it to ambientTube before compiling it and releasing it, I won't be compiling again😅 until next update. just in case you were wondering.</p>
 
 #### Features that i want to implement
 <ul>
