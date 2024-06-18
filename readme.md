@@ -59,7 +59,7 @@
 
 [//]: # (<p>My code may break as it is not tested rigorously</p>)
 <p>i'll work on this project and implement more features in the future</p>
-<p>When you download audio you may get the filename as yttitle[appleTube]...... appleTube was the name I came up with at first and forgot to change it to ambientTube before compiling it and releasing I won't be compiling again😅. just in case if you were wondering.</p>
+<p>When you download audio you may get the filename as yt-Title[appleTube]......, appleTube was the name I came up with at first and I forgot to change it to ambientTube before compiling it and releasing it, I won't be compiling again😅. just in case you were wondering.</p>
 
 #### Features that i want to implement
 <ul>
