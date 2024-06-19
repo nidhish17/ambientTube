@@ -141,7 +141,7 @@ class AudioDownload:
             "thumbnail_display_url": display_thumb if display_thumb is not None else "thumbnail not available",
             "title": str(title),
             "duration": duration,
-            "file_name": f"{sanitize_title(title)}[appleTube][{dt.datetime.now().strftime('%S-%f')}]",
+            "file_name": f"{sanitize_title(title)}[ambientTube][{dt.datetime.now().strftime('%S-%f')}]",
             "status_code": 200
         }
 
