@@ -4,7 +4,7 @@
     <img src="icon.ico" alt="app-icon" style="border-radius: 10%">
 </div>
 
-
+<b>Please Run this after cloning -> "pip install yt-dlp --upgrade" without the quotes/""</b>
 
 <h2>Features</h2>
 
